@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://celogviclb0uj"
+path="res://.godot/imported/bad sound short.wav-12e1914ef6f24e4201f6dbf43fe2dbe2.sample"
+
+[deps]
+
+source_file="res://Assets/Music/bad sound short.wav"
+dest_files=["res://.godot/imported/bad sound short.wav-12e1914ef6f24e4201f6dbf43fe2dbe2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

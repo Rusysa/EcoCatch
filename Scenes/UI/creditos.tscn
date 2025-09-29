@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbp31ttu8hv84"]
+
+[ext_resource type="Script" uid="uid://dwsblux51eqs7" path="res://Script/UI/creditos.gd" id="1_y8yv1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r06ss"]
+font_size = 70
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y8yv1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.355314, 0.355314, 0.355314, 1)
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 24.0
+offset_right = 819.0
+offset_bottom = 120.0
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_r06ss")
+
+[node name="Texto" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 130.0
+offset_right = 1183.0
+offset_bottom = 671.0
+bbcode_enabled = true
+text = "
+
+[center][font_size=32]Un juego de[/font_size][/center]
+[center][font_size=36][b]Rudy Saldaña Merenciano[/b][/font_size][/center]
+
+
+[center][font_size=38][b]-- Sonidos --[/b][/font_size][/center]
+[center][font_size=28]Bajados de FreeSound.org[/font_size][/center]
+[center] [b]Correct Sound[/b] -- Correct Blips by CogFireStudios -- https://freesound.org/s/531510/ -- License: Creative Commons 0v [/center]
+[center] [b]Bad Sound Sound[/b] -- notification 3  (bad).wav by cameronmusic -- https://freesound.org/s/138413/ -- License: Attribution 3.0 [/center]
+[center] [b]Game Over Sound[/b] -- Game over sounds 1 by afleetingspeck -- https://freesound.org/s/232444/ -- License: Creative Commons 0 [/center]
+
+[center][font_size=38][b]-- Musica--[/b][/font_size][/center]
+[center][font_size=22]Todos los derechos a su autor @JDSherbert  [/font_size][/center]
+[center] https://jdsherbert.itch.io/ambiences-music-pack[/center]
+
+[center][font_size=38][b]-- Assets --[/b][/font_size][/center]
+[center] [b]Treasure Hunters Asset Pack [/b] hecho por @PixelFrogStudio -- https://pixelfrog-assets.itch.io/treasure-hunters  [/center]
+[center] [b]The adventurer male [/b] hecho por @Sscary_Gameart -- https://sscary.itch.io/the-adventurer-male  [/center]
+[center] [b]Contenedores[/b] tomado de https://mx.pinterest.com/pin/859624647659177807/ [/center]
+
+
+[center][font_size=38][b]-- Motor --[/b][/font_size][/center]
+[center]Creado con el motor de videojuegos Godot Engine[/center]
+[center]https://godotengine.org/es/[/center]"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 631.0
+offset_right = 258.0
+offset_bottom = 681.0
+theme_override_font_sizes/font_size = 30
+text = "Volver"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://du4taax6rx515"]
+
+[ext_resource type="Script" uid="uid://cdie33068l1lr" path="res://Script/UI/ui.gd" id="1_ahcct"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahcct"]
+font_size = 20
+outline_size = 2
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_de23q"]
+font_size = 20
+outline_size = 2
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c7mb3"]
+font_size = 20
+outline_size = 2
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_ahcct")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 109.0
+offset_right = 209.0
+offset_bottom = 144.0
+text = "Puntaje: "
+label_settings = SubResource("LabelSettings_ahcct")
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 45.0
+offset_top = 61.0
+offset_right = 229.0
+offset_bottom = 96.0
+text = "Mejor puntaje: "
+label_settings = SubResource("LabelSettings_de23q")
+
+[node name="GroundedObjectsLabel" type="Label" parent="."]
+offset_left = 43.0
+offset_top = 160.0
+offset_right = 345.0
+offset_bottom = 197.0
+text = "Objetos en el suelo : 0/10"
+label_settings = SubResource("LabelSettings_c7mb3")

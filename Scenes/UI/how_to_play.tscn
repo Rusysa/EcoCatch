@@ -1,0 +1,336 @@
+[gd_scene load_steps=14 format=3 uid="uid://dpaj1ka0lvah5"]
+
+[ext_resource type="Script" uid="uid://03a57s8hake3" path="res://Script/UI/how_to_play.gd" id="1_0g8wc"]
+[ext_resource type="Texture2D" uid="uid://bqt1a6xouco5n" path="res://Assets/The Male adventurer - Free/Walk/walk.png" id="1_23ib0"]
+[ext_resource type="Texture2D" uid="uid://lp7xf7ifpbxk" path="res://Assets/bg images/darker bg.png" id="2_abvdx"]
+[ext_resource type="Texture2D" uid="uid://bvwp778pqw0ct" path="res://Assets/The Male adventurer - Free/Death/death_normal.png" id="5_ecist"]
+[ext_resource type="Texture2D" uid="uid://cbsw45pa62blm" path="res://Assets/ControllerIcons/arrow_left.png" id="6_ifrvg"]
+[ext_resource type="Texture2D" uid="uid://dl7yakoyur7so" path="res://Assets/ControllerIcons/space.png" id="7_8b7o0"]
+[ext_resource type="Texture2D" uid="uid://warl4dbre4tm" path="res://Assets/images/containers bg.png" id="8_8b7o0"]
+[ext_resource type="Texture2D" uid="uid://dcek2bry4n3yd" path="res://Assets/images/bg bote.png" id="8_abvdx"]
+[ext_resource type="Texture2D" uid="uid://3s754pvr5khf" path="res://Assets/images/plastic-bottle-in-pixel-art-style-vector-removebg-preview.png" id="9_ecist"]
+[ext_resource type="Texture2D" uid="uid://cdae22dc1eh0s" path="res://Assets/images/pixel-art-illustration-soda-pixelated-600nw-2543492611-removebg-preview.png" id="10_ci4fw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ufirb"]
+font_size = 25
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ua34x"]
+font_size = 70
+outline_size = 2
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_abvdx"]
+load_path = "res://.godot/imported/Jump.png-fbf448399fa50badac8015c8824c5c7d.ctex"
+
+[node name="How to play" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0g8wc")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_abvdx")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.188861, 0.21116, 0.240217, 1)
+metadata/_edit_lock_ = true
+
+[node name="Opciones2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 266.0
+offset_right = 1177.0
+offset_bottom = 301.0
+text = "¡CUIDADO!"
+label_settings = SubResource("LabelSettings_ufirb")
+horizontal_alignment = 1
+
+[node name="Movimiento" type="Label" parent="."]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 477.0
+offset_right = 326.0
+offset_bottom = 526.0
+text = "Usa las flechas direccionales
+para moverte"
+horizontal_alignment = 1
+justification_flags = 162
+
+[node name="OptionsText2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 473.0
+offset_right = 863.0
+offset_bottom = 522.0
+text = "Cada objeto tiene 
+su contenedor correcto"
+horizontal_alignment = 1
+
+[node name="Opciones" type="Label" parent="."]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 263.0
+offset_right = 874.0
+offset_bottom = 298.0
+text = "No te confundas"
+label_settings = SubResource("LabelSettings_ufirb")
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 59.0
+offset_right = 1279.0
+offset_bottom = 155.0
+text = "COMO JUGAR"
+label_settings = SubResource("LabelSettings_ua34x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrabItem" type="Label" parent="."]
+layout_mode = 0
+offset_left = 418.0
+offset_top = 259.0
+offset_right = 563.0
+offset_bottom = 294.0
+text = "Depositar"
+label_settings = SubResource("LabelSettings_ufirb")
+horizontal_alignment = 1
+
+[node name="Movement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 137.981
+offset_top = 258.0
+offset_right = 282.981
+offset_bottom = 293.0
+text = "Moverse"
+label_settings = SubResource("LabelSettings_ufirb")
+horizontal_alignment = 1
+
+[node name="Derrota" type="Label" parent="."]
+layout_mode = 0
+offset_left = 949.0
+offset_top = 455.0
+offset_right = 1224.0
+offset_bottom = 530.0
+text = "Los objetos aumentan
+de velocidad y si tienes mas de Diez
+objetos en el suelo perderas"
+horizontal_alignment = 1
+
+[node name="DepositarLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 475.0
+offset_right = 600.0
+offset_bottom = 524.0
+text = "Los objetos se depositan
+usando la barra espaciadora"
+horizontal_alignment = 1
+justification_flags = 162
+
+[node name="Character" type="Node2D" parent="."]
+
+[node name="GrabItem" type="Sprite2D" parent="Character"]
+position = Vector2(448, 370)
+scale = Vector2(4, 4)
+texture = SubResource("CompressedTexture2D_abvdx")
+region_enabled = true
+region_rect = Rect2(349, 20, 22, 28)
+
+[node name="Left" type="Sprite2D" parent="Character"]
+position = Vector2(170.981, 359)
+scale = Vector2(4.271, 4)
+texture = ExtResource("1_23ib0")
+region_enabled = true
+region_rect = Rect2(205, 79, 22, 29)
+
+[node name="Right" type="Sprite2D" parent="Character"]
+position = Vector2(255.981, 364)
+scale = Vector2(4, 4)
+texture = ExtResource("1_23ib0")
+region_enabled = true
+region_rect = Rect2(208, 337, 16, 28)
+
+[node name="Death" type="Sprite2D" parent="Character"]
+z_index = 1
+position = Vector2(1074, 388)
+scale = Vector2(4, 4)
+texture = ExtResource("5_ecist")
+region_enabled = true
+region_rect = Rect2(305, 349, 29, 26)
+
+[node name="ControllerIcons" type="Node2D" parent="."]
+
+[node name="Left_Move" type="Sprite2D" parent="ControllerIcons"]
+position = Vector2(173.981, 447)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ifrvg")
+
+[node name="Right_Move" type="Sprite2D" parent="ControllerIcons"]
+position = Vector2(253.981, 447)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_ifrvg")
+flip_h = true
+
+[node name="Grab_Item" type="Sprite2D" parent="ControllerIcons"]
+position = Vector2(487, 447)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("7_8b7o0")
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 617.0
+offset_right = 739.0
+offset_bottom = 662.0
+theme_override_font_sizes/font_size = 35
+text = "Volver"
+
+[node name="Pila de basura" type="Node2D" parent="."]
+position = Vector2(992, 392)
+rotation = -2.11682
+scale = Vector2(0.12, 0.12)
+
+[node name="vidrio6" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-101.238, -42.0127)
+texture = ExtResource("8_abvdx")
+
+[node name="plasticos4" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-312.737, 209.765)
+rotation = 0.0118306
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("9_ecist")
+
+[node name="plasticos3" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-525.055, 607.315)
+rotation = 0.0118306
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_ecist")
+
+[node name="plasticos2" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-651.813, 783.822)
+rotation = -3.12385
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_ecist")
+
+[node name="vidrio4" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-382.521, 420.892)
+rotation = 1.04699
+texture = ExtResource("8_abvdx")
+
+[node name="metal2" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-198.961, 54.6221)
+rotation = 2.27768
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("10_ci4fw")
+
+[node name="vidrio3" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-564.99, 592.799)
+texture = ExtResource("8_abvdx")
+
+[node name="plasticos" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-224.211, 224.553)
+rotation = -3.13568
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_ecist")
+
+[node name="metal" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-840.415, 1030.01)
+rotation = 1.13884
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_ci4fw")
+
+[node name="metal3" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-397.753, 333.627)
+rotation = 2.27768
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("10_ci4fw")
+
+[node name="metal4" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-693.281, 787.877)
+rotation = 2.27768
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("10_ci4fw")
+
+[node name="vidrio5" type="Sprite2D" parent="Pila de basura"]
+position = Vector2(-752.605, 917.6)
+texture = ExtResource("8_abvdx")
+
+[node name="containers" type="Node2D" parent="."]
+
+[node name="ContenedorVidrio2" type="Sprite2D" parent="containers"]
+position = Vector2(701, 404)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8b7o0")
+region_enabled = true
+region_rect = Rect2(82, 77, 152, 150)
+
+[node name="ContenedorVidrio" type="Sprite2D" parent="containers"]
+position = Vector2(516, 376)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8b7o0")
+region_enabled = true
+region_rect = Rect2(82, 77, 152, 150)
+
+[node name="metal" type="Sprite2D" parent="containers"]
+position = Vector2(839.5, 400.554)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8b7o0")
+region_enabled = true
+region_rect = Rect2(93, 284, 134, 149)
+
+[node name="plastico" type="Sprite2D" parent="containers"]
+position = Vector2(769.942, 399.942)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_8b7o0")
+region_enabled = true
+region_rect = Rect2(295, 279, 108, 154)
+
+[node name="objects" type="Node2D" parent="."]
+
+[node name="vidrio" type="Sprite2D" parent="objects"]
+position = Vector2(474, 379)
+rotation = 0.512385
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("8_abvdx")
+
+[node name="vidrio2" type="Sprite2D" parent="objects"]
+position = Vector2(696, 347)
+rotation = -0.538883
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("8_abvdx")
+
+[node name="plasticos" type="Sprite2D" parent="objects"]
+position = Vector2(774.942, 344.942)
+rotation = 0.200138
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_ecist")
+
+[node name="metal" type="Sprite2D" parent="objects"]
+position = Vector2(841.5, 348.554)
+rotation = 0.0224068
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_ci4fw")
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

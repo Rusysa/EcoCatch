@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://djw1febh6r6vt"]
+
+[ext_resource type="Script" uid="uid://b511diiaxbejb" path="res://Script/trash/plastico.gd" id="1_7a545"]
+[ext_resource type="Texture2D" uid="uid://3s754pvr5khf" path="res://Assets/images/plastic-bottle-in-pixel-art-style-vector-removebg-preview.png" id="1_agl24"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a545"]
+size = Vector2(41.171, 155.211)
+
+[node name="Plastico" type="Area2D" groups=["object"]]
+rotation = -0.191011
+scale = Vector2(0.2, 0.2)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_7a545")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_agl24")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.84777, 13.6055)
+shape = SubResource("RectangleShape2D_7a545")
+
+[node name="CollisionTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="CollisionTimer" to="." method="_on_collision_timer_timeout"]

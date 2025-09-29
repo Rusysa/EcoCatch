@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://djvrv6hb41uk6"]
+
+[ext_resource type="Script" uid="uid://65v2avn1guhs" path="res://Script/UI/game_over.gd" id="1_jxkuk"]
+[ext_resource type="Texture2D" uid="uid://b84n20pl57ulf" path="res://Assets/bg images/darker red bg.png" id="2_wpaxx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jqelu"]
+font_size = 80
+outline_size = 3
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxkuk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wpaxx")
+stretch_mode = 3
+metadata/_edit_lock_ = true
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 2
+offset_left = 397.0
+offset_top = 102.0
+offset_right = 925.0
+offset_bottom = 212.0
+theme_override_font_sizes/font_size = 80
+text = "HAS PERDIDO"
+label_settings = SubResource("LabelSettings_jqelu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -84.0
+offset_right = 155.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "PUNTUACIÓN: "
+horizontal_alignment = 1
+
+[node name="HighScoreLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "MEJOR PUNTUACIÓN: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 394.0
+offset_right = 781.0
+offset_bottom = 491.0
+theme_override_constants/separation = 11
+
+[node name="RestartButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Reiniciar"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Menu principal"
+
+[connection signal="pressed" from="VBoxContainer2/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer2/MenuButton" to="." method="_on_menu_button_pressed"]

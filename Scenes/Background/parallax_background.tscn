@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://dcnnln01fponj"]
+
+[ext_resource type="Texture2D" uid="uid://c6aonh24fx4ew" path="res://Assets/images/Palm Tree Island/Sprites/Background/BG Image.png" id="1_064p8"]
+[ext_resource type="Texture2D" uid="uid://bjedxx3eg0yo5" path="res://Assets/images/Palm Tree Island/Sprites/Background/Water Reflect Big 01.png" id="2_nj55x"]
+[ext_resource type="Texture2D" uid="uid://d3liecqlqfsgl" path="res://Assets/images/Palm Tree Island/Sprites/Background/Water Reflect Big 02.png" id="3_de0b8"]
+[ext_resource type="Texture2D" uid="uid://begptf1w3xgw3" path="res://Assets/images/Palm Tree Island/Sprites/Background/Water Reflect Big 03.png" id="4_f6i4q"]
+[ext_resource type="Texture2D" uid="uid://cm46nkxfvcam3" path="res://Assets/images/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" id="5_ylr01"]
+[ext_resource type="Texture2D" uid="uid://dkesl8fjs7jll" path="res://Assets/images/Palm Tree Island/Sprites/Background/Big Clouds.png" id="6_de0b8"]
+[ext_resource type="Script" uid="uid://dl1n5263nbgih" path="res://Script/background/nube_movimiento.gd" id="6_f6i4q"]
+[ext_resource type="Texture2D" uid="uid://2vrky4piub2j" path="res://Assets/images/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="8_idy34"]
+[ext_resource type="Texture2D" uid="uid://d37xk1ehn8q3r" path="res://Assets/images/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="10_m84xn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eh6qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nj55x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_de0b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f6i4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ylr01")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(2, 43)
+
+[node name="BgImage" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+position = Vector2(632, 284.75)
+scale = Vector2(3.52083, 5.21485)
+texture = ExtResource("1_064p8")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+position = Vector2(2, 43)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxLayer2"]
+position = Vector2(656, 436)
+scale = Vector2(5.59412, 7.4)
+sprite_frames = SubResource("SpriteFrames_eh6qi")
+frame_progress = 0.652396
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+position = Vector2(2, 43)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(639, 244)
+scale = Vector2(2.86384, 3.12376)
+texture = ExtResource("6_de0b8")
+region_enabled = true
+region_rect = Rect2(0, 0, 448, 101)
+script = ExtResource("6_f6i4q")
+speed = 1.0
+limit_x = -1280.0
+start_x = -100.0
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+position = Vector2(0.000976563, 0.000152588)
+scale = Vector2(0.999999, 1)
+
+[node name="SmallCloud1" type="Sprite2D" parent="ParallaxLayer4"]
+visible = false
+position = Vector2(433, 136)
+scale = Vector2(2.97297, 3.29167)
+texture = ExtResource("8_idy34")
+
+[node name="SmallCloud3" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(684, 178)
+scale = Vector2(1.15, 1.65385)
+texture = ExtResource("10_m84xn")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvsorsiqeet66"]
+
+[ext_resource type="Script" uid="uid://ntvi5gbkltxo" path="res://Script/containers/glass_container.gd" id="1_f0igb"]
+[ext_resource type="Texture2D" uid="uid://warl4dbre4tm" path="res://Assets/images/containers bg.png" id="2_f0igb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f0igb"]
+size = Vector2(299, 308)
+
+[node name="Vidrios" type="Area2D" groups=["container"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_f0igb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("2_f0igb")
+region_enabled = true
+region_rect = Rect2(103, 83, 112, 136)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 15)
+shape = SubResource("RectangleShape2D_f0igb")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmw8h43qmqtgd"
+path="res://.godot/imported/JDSherbert - Ambiences Music Pack - Junction Jazz.wav-fd2810dc215fe271b722a5602413e062.sample"
+
+[deps]
+
+source_file="res://Assets/Music/JDSherbert - Ambiences Music Pack - Junction Jazz.wav"
+dest_files=["res://.godot/imported/JDSherbert - Ambiences Music Pack - Junction Jazz.wav-fd2810dc215fe271b722a5602413e062.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

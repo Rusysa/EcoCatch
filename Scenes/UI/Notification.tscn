@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw8alvt7xxkpx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n8kpb"]
+font_size = 25
+font_color = Color(1, 1, 0.00392157, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="NotificationLabel" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 437.0
+offset_top = 103.0
+offset_right = 887.0
+offset_bottom = 138.0
+text = "¡ VELOCIDAD DE CAIDA AUMENTADA !"
+label_settings = SubResource("LabelSettings_n8kpb")
+horizontal_alignment = 1

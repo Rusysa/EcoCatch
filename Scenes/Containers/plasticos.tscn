@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8pve7n2h616x"]
+
+[ext_resource type="Script" uid="uid://meex4xg1qwpq" path="res://Script/containers/plasticos.gd" id="1_pgmq5"]
+[ext_resource type="Texture2D" uid="uid://warl4dbre4tm" path="res://Assets/images/containers bg.png" id="2_pgmq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgmq5"]
+size = Vector2(347, 262)
+
+[node name="Plasticos" type="Area2D" groups=["container"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_pgmq5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 52)
+scale = Vector2(3, 3)
+texture = ExtResource("2_pgmq5")
+region_enabled = true
+region_rect = Rect2(290, 290, 121, 143)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5, 77)
+shape = SubResource("RectangleShape2D_pgmq5")

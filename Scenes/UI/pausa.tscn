@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjhij3m0d20dc"]
+
+[ext_resource type="Script" uid="uid://bgf4a0650rjx8" path="res://Script/UI/pausa.gd" id="1_udxxv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_udxxv"]
+font_size = 80
+outline_size = 2
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mif24"]
+font_size = 20
+
+[node name="Pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_udxxv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.239216, 0.239216, 0.239216, 0.529412)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 525.0
+offset_top = 247.0
+offset_right = 757.0
+offset_bottom = 357.0
+text = "Pausa"
+label_settings = SubResource("LabelSettings_udxxv")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 468.0
+offset_top = 355.0
+offset_right = 834.0
+offset_bottom = 383.0
+text = "Pulsa la tecla ESC para quitar la pausa"
+label_settings = SubResource("LabelSettings_mif24")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 565.0
+offset_top = 404.0
+offset_right = 718.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 20
+text = "Volver al Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

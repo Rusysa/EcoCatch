@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://beaqmdsemmucp"]
+
+[ext_resource type="Script" uid="uid://dag0omolehf6c" path="res://Script/trash/vidrio.gd" id="1_mqgnt"]
+[ext_resource type="Texture2D" uid="uid://dcek2bry4n3yd" path="res://Assets/images/bg bote.png" id="2_mqgnt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqgnt"]
+size = Vector2(63.6682, 327.41)
+
+[node name="vidrio" type="Area2D" groups=["object"]]
+scale = Vector2(0.1, 0.1)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_mqgnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, -20)
+rotation = 0.778589
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_mqgnt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.2716, -23.2088)
+rotation = 0.78675
+shape = SubResource("RectangleShape2D_mqgnt")
+
+[node name="CollisionTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="CollisionTimer" to="." method="_on_collision_timer_timeout"]
