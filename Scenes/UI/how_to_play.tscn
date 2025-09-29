@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://03a57s8hake3" path="res://Script/UI/how_to_play.gd" id="1_0g8wc"]
 [ext_resource type="Texture2D" uid="uid://bqt1a6xouco5n" path="res://Assets/The Male adventurer - Free/Walk/walk.png" id="1_23ib0"]
 [ext_resource type="Texture2D" uid="uid://lp7xf7ifpbxk" path="res://Assets/bg images/darker bg.png" id="2_abvdx"]
+[ext_resource type="Texture2D" uid="uid://dtjv6v6a4sno6" path="res://icon.png" id="5_ci4fw"]
 [ext_resource type="Texture2D" uid="uid://bvwp778pqw0ct" path="res://Assets/The Male adventurer - Free/Death/death_normal.png" id="5_ecist"]
 [ext_resource type="Texture2D" uid="uid://cbsw45pa62blm" path="res://Assets/ControllerIcons/arrow_left.png" id="6_ifrvg"]
 [ext_resource type="Texture2D" uid="uid://dl7yakoyur7so" path="res://Assets/ControllerIcons/space.png" id="7_8b7o0"]
@@ -23,9 +24,6 @@ font_size = 70
 outline_size = 2
 shadow_size = 6
 shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_abvdx"]
-load_path = "res://.godot/imported/Jump.png-fbf448399fa50badac8015c8824c5c7d.ctex"
 
 [node name="How to play" type="Control"]
 layout_mode = 3
@@ -151,13 +149,6 @@ justification_flags = 162
 
 [node name="Character" type="Node2D" parent="."]
 
-[node name="GrabItem" type="Sprite2D" parent="Character"]
-position = Vector2(448, 370)
-scale = Vector2(4, 4)
-texture = SubResource("CompressedTexture2D_abvdx")
-region_enabled = true
-region_rect = Rect2(349, 20, 22, 28)
-
 [node name="Left" type="Sprite2D" parent="Character"]
 position = Vector2(170.981, 359)
 scale = Vector2(4.271, 4)
@@ -180,6 +171,11 @@ texture = ExtResource("5_ecist")
 region_enabled = true
 region_rect = Rect2(305, 349, 29, 26)
 
+[node name="Sprite2D" type="Sprite2D" parent="Character"]
+position = Vector2(461, 364)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_ci4fw")
+
 [node name="ControllerIcons" type="Node2D" parent="."]
 
 [node name="Left_Move" type="Sprite2D" parent="ControllerIcons"]
@@ -200,12 +196,12 @@ texture = ExtResource("7_8b7o0")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 541.0
-offset_top = 617.0
-offset_right = 739.0
-offset_bottom = 662.0
+offset_left = 465.0
+offset_top = 625.0
+offset_right = 631.0
+offset_bottom = 682.0
 theme_override_font_sizes/font_size = 35
-text = "Volver"
+text = "MENU"
 
 [node name="Pila de basura" type="Node2D" parent="."]
 position = Vector2(992, 392)
@@ -310,6 +306,7 @@ region_rect = Rect2(295, 279, 108, 154)
 [node name="objects" type="Node2D" parent="."]
 
 [node name="vidrio" type="Sprite2D" parent="objects"]
+visible = false
 position = Vector2(474, 379)
 rotation = 0.512385
 scale = Vector2(0.12, 0.12)
@@ -333,4 +330,14 @@ rotation = 0.0224068
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("10_ci4fw")
 
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 626.0
+offset_right = 850.0
+offset_bottom = 683.0
+theme_override_font_sizes/font_size = 35
+text = "JUGAR"
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]

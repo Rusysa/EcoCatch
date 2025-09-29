@@ -1,7 +1,7 @@
 extends Control
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://Scenes/levels/Main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/UI/how_to_play.tscn")
 
 func _on_exit_button_pressed():
 	get_tree().quit()
