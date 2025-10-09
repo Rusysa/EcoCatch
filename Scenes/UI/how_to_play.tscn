@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dpaj1ka0lvah5"]
+[gd_scene load_steps=15 format=3 uid="uid://dpaj1ka0lvah5"]
 
 [ext_resource type="Script" uid="uid://03a57s8hake3" path="res://Script/UI/how_to_play.gd" id="1_0g8wc"]
 [ext_resource type="Texture2D" uid="uid://bqt1a6xouco5n" path="res://Assets/The Male adventurer - Free/Walk/walk.png" id="1_23ib0"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dcek2bry4n3yd" path="res://Assets/images/bg bote.png" id="8_abvdx"]
 [ext_resource type="Texture2D" uid="uid://3s754pvr5khf" path="res://Assets/images/plastic-bottle-in-pixel-art-style-vector-removebg-preview.png" id="9_ecist"]
 [ext_resource type="Texture2D" uid="uid://cdae22dc1eh0s" path="res://Assets/images/pixel-art-illustration-soda-pixelated-600nw-2543492611-removebg-preview.png" id="10_ci4fw"]
+[ext_resource type="Texture2D" uid="uid://caio0q7fvwaq7" path="res://Assets/ControllerIcons/esc.png" id="12_ci4fw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ufirb"]
 font_size = 25
@@ -55,20 +56,20 @@ metadata/_edit_lock_ = true
 
 [node name="Opciones2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 978.0
-offset_top = 266.0
-offset_right = 1177.0
-offset_bottom = 301.0
+offset_left = 974.0
+offset_top = 220.0
+offset_right = 1173.0
+offset_bottom = 255.0
 text = "¡CUIDADO!"
 label_settings = SubResource("LabelSettings_ufirb")
 horizontal_alignment = 1
 
 [node name="Movimiento" type="Label" parent="."]
 layout_mode = 0
-offset_left = 106.0
-offset_top = 477.0
-offset_right = 326.0
-offset_bottom = 526.0
+offset_left = 102.0
+offset_top = 431.0
+offset_right = 322.0
+offset_bottom = 480.0
 text = "Usa las flechas direccionales
 para moverte"
 horizontal_alignment = 1
@@ -76,20 +77,20 @@ justification_flags = 162
 
 [node name="OptionsText2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 682.0
-offset_top = 473.0
-offset_right = 863.0
-offset_bottom = 522.0
+offset_left = 678.0
+offset_top = 427.0
+offset_right = 859.0
+offset_bottom = 476.0
 text = "Cada objeto tiene 
 su contenedor correcto"
 horizontal_alignment = 1
 
 [node name="Opciones" type="Label" parent="."]
 layout_mode = 0
-offset_left = 675.0
-offset_top = 263.0
-offset_right = 874.0
-offset_bottom = 298.0
+offset_left = 671.0
+offset_top = 217.0
+offset_right = 870.0
+offset_bottom = 252.0
 text = "No te confundas"
 label_settings = SubResource("LabelSettings_ufirb")
 horizontal_alignment = 1
@@ -97,9 +98,9 @@ horizontal_alignment = 1
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 59.0
+offset_top = 40.0
 offset_right = 1279.0
-offset_bottom = 155.0
+offset_bottom = 136.0
 text = "COMO JUGAR"
 label_settings = SubResource("LabelSettings_ua34x")
 horizontal_alignment = 1
@@ -107,30 +108,30 @@ vertical_alignment = 1
 
 [node name="GrabItem" type="Label" parent="."]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 259.0
-offset_right = 563.0
-offset_bottom = 294.0
+offset_left = 414.0
+offset_top = 213.0
+offset_right = 559.0
+offset_bottom = 248.0
 text = "Depositar"
 label_settings = SubResource("LabelSettings_ufirb")
 horizontal_alignment = 1
 
 [node name="Movement" type="Label" parent="."]
 layout_mode = 0
-offset_left = 137.981
-offset_top = 258.0
-offset_right = 282.981
-offset_bottom = 293.0
+offset_left = 133.981
+offset_top = 212.0
+offset_right = 278.981
+offset_bottom = 247.0
 text = "Moverse"
 label_settings = SubResource("LabelSettings_ufirb")
 horizontal_alignment = 1
 
 [node name="Derrota" type="Label" parent="."]
 layout_mode = 0
-offset_left = 949.0
-offset_top = 455.0
-offset_right = 1224.0
-offset_bottom = 530.0
+offset_left = 945.0
+offset_top = 409.0
+offset_right = 1220.0
+offset_bottom = 484.0
 text = "Los objetos aumentan
 de velocidad y si tienes mas de Diez
 objetos en el suelo perderas"
@@ -138,10 +139,10 @@ horizontal_alignment = 1
 
 [node name="DepositarLabel" type="Label" parent="."]
 layout_mode = 0
-offset_left = 380.0
-offset_top = 475.0
-offset_right = 600.0
-offset_bottom = 524.0
+offset_left = 376.0
+offset_top = 429.0
+offset_right = 596.0
+offset_bottom = 478.0
 text = "Los objetos se depositan
 usando la barra espaciadora"
 horizontal_alignment = 1
@@ -150,14 +151,14 @@ justification_flags = 162
 [node name="Character" type="Node2D" parent="."]
 
 [node name="Left" type="Sprite2D" parent="Character"]
-position = Vector2(170.981, 359)
+position = Vector2(166.981, 313)
 scale = Vector2(4.271, 4)
 texture = ExtResource("1_23ib0")
 region_enabled = true
 region_rect = Rect2(205, 79, 22, 29)
 
 [node name="Right" type="Sprite2D" parent="Character"]
-position = Vector2(255.981, 364)
+position = Vector2(251.981, 318)
 scale = Vector2(4, 4)
 texture = ExtResource("1_23ib0")
 region_enabled = true
@@ -165,46 +166,46 @@ region_rect = Rect2(208, 337, 16, 28)
 
 [node name="Death" type="Sprite2D" parent="Character"]
 z_index = 1
-position = Vector2(1074, 388)
+position = Vector2(1070, 342)
 scale = Vector2(4, 4)
 texture = ExtResource("5_ecist")
 region_enabled = true
 region_rect = Rect2(305, 349, 29, 26)
 
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
-position = Vector2(461, 364)
+position = Vector2(457, 318)
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("5_ci4fw")
 
 [node name="ControllerIcons" type="Node2D" parent="."]
 
 [node name="Left_Move" type="Sprite2D" parent="ControllerIcons"]
-position = Vector2(173.981, 447)
+position = Vector2(169.981, 401)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_ifrvg")
 
 [node name="Right_Move" type="Sprite2D" parent="ControllerIcons"]
-position = Vector2(253.981, 447)
+position = Vector2(249.981, 401)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_ifrvg")
 flip_h = true
 
 [node name="Grab_Item" type="Sprite2D" parent="ControllerIcons"]
-position = Vector2(487, 447)
+position = Vector2(483, 401)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("7_8b7o0")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0
-offset_left = 465.0
-offset_top = 625.0
-offset_right = 631.0
-offset_bottom = 682.0
+offset_left = 473.0
+offset_top = 640.0
+offset_right = 639.0
+offset_bottom = 697.0
 theme_override_font_sizes/font_size = 35
 text = "MENU"
 
 [node name="Pila de basura" type="Node2D" parent="."]
-position = Vector2(992, 392)
+position = Vector2(988, 346)
 rotation = -2.11682
 scale = Vector2(0.12, 0.12)
 
@@ -276,28 +277,28 @@ texture = ExtResource("8_abvdx")
 [node name="containers" type="Node2D" parent="."]
 
 [node name="ContenedorVidrio2" type="Sprite2D" parent="containers"]
-position = Vector2(701, 404)
+position = Vector2(697, 358)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_8b7o0")
 region_enabled = true
 region_rect = Rect2(82, 77, 152, 150)
 
 [node name="ContenedorVidrio" type="Sprite2D" parent="containers"]
-position = Vector2(516, 376)
+position = Vector2(512, 330)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_8b7o0")
 region_enabled = true
 region_rect = Rect2(82, 77, 152, 150)
 
 [node name="metal" type="Sprite2D" parent="containers"]
-position = Vector2(839.5, 400.554)
+position = Vector2(835.5, 354.554)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_8b7o0")
 region_enabled = true
 region_rect = Rect2(93, 284, 134, 149)
 
 [node name="plastico" type="Sprite2D" parent="containers"]
-position = Vector2(769.942, 399.942)
+position = Vector2(765.942, 353.942)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_8b7o0")
 region_enabled = true
@@ -313,31 +314,45 @@ scale = Vector2(0.12, 0.12)
 texture = ExtResource("8_abvdx")
 
 [node name="vidrio2" type="Sprite2D" parent="objects"]
-position = Vector2(696, 347)
+position = Vector2(692, 301)
 rotation = -0.538883
 scale = Vector2(0.12, 0.12)
 texture = ExtResource("8_abvdx")
 
 [node name="plasticos" type="Sprite2D" parent="objects"]
-position = Vector2(774.942, 344.942)
+position = Vector2(770.942, 298.942)
 rotation = 0.200138
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("9_ecist")
 
 [node name="metal" type="Sprite2D" parent="objects"]
-position = Vector2(841.5, 348.554)
+position = Vector2(837.5, 302.554)
 rotation = 0.0224068
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("10_ci4fw")
 
 [node name="Jugar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 670.0
-offset_top = 626.0
-offset_right = 850.0
-offset_bottom = 683.0
+offset_left = 678.0
+offset_top = 641.0
+offset_right = 858.0
+offset_bottom = 698.0
 theme_override_font_sizes/font_size = 35
 text = "JUGAR"
+
+[node name="Movimiento2" type="Label" parent="."]
+offset_left = 548.0
+offset_top = 531.0
+offset_right = 768.0
+offset_bottom = 580.0
+text = "Pulsa ESC para poner pausa."
+horizontal_alignment = 1
+justification_flags = 162
+
+[node name="Esc" type="Sprite2D" parent="."]
+position = Vector2(655, 589)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_ci4fw")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
